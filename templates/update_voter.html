@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Voter</title>
+    <style>
+        /* Base Styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #74ebd5, #9face6);
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Header Styling */
+        header {
+            background-color: #4a90e2;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        header a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 15px;
+            font-size: 0.9em;
+            padding: 8px 15px;
+            border-radius: 20px;
+            background-color: #012cee;
+            transition: background-color 0.3s ease, transform 0.2s;
+        }
+
+        header a:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
+
+        /* Form Container */
+        .form-container {
+            background: #fff;
+            padding: 30px 40px;
+            margin: 50px auto;
+            border-radius: 12px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+            max-width: 450px;
+            width: 90%;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 1.8em;
+            color: #4a4a4a;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin: 15px 0 5px;
+            color: #555;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 1em;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        input:focus {
+            border-color: #4a90e2;
+            box-shadow: 0 0 8px rgba(74, 144, 226, 0.3);
+            outline: none;
+        }
+
+        /* Button Styling */
+        button {
+            width: 100%;
+            padding: 12px;
+            background: linear-gradient(135deg, #4a90e2, #007bff);
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.2s;
+        }
+
+        button:hover {
+            background: linear-gradient(135deg, #0056b3, #003d99);
+            transform: scale(1.03);
+        }
+
+        /* Footer Navigation */
+        footer {
+            text-align: center;
+            margin-top: auto;
+            padding: 10px;
+        }
+
+        footer a {
+            color: #007bff;
+            text-decoration: none;
+            font-size: 1em;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <a href="/admin_dashboard">Dashboard</a>
+        <a href="/voter_management">Back to Voter Management</a>
+    </header>
+
+    <!-- Form Section -->
+    <div class="form-container">
+        <h1>Update Voter</h1>
+        <form method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" value="{{ voter['name'] }}" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" value="{{ voter['email'] }}" required>
+
+            <label for="phone">Phone:</label>
+            <input type="text" id="phone" name="phone" value="{{ voter['phone'] }}" required>
+
+            <button type="submit">Update Voter</button>
+        </form>
+    </div>
+</body>
+</html>
