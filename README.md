@@ -80,7 +80,7 @@ Follow the steps below to set up and run the E-Voting System project on your loc
 #### 1. Clone the Repository
 Clone this repository to your local machine:
 
-    git clone https://github.com/your-username/evoting-system.git
+    git clone https://github.com/Hrishi-24/E-Voting-System.git
 
 ### 2. Navigate to the project directory
 Move into the project folder:
